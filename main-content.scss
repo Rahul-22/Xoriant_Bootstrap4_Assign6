@@ -1,0 +1,171 @@
+$prime-color: red;
+$nav-back : #0069ff;
+$nav-a: white;
+$page-padding: 10px 0;
+@mixin section{
+	color: #6ab446;
+	font-weight: bold;
+	font-size: 20px;
+	text-shadow: 2px 2px #000;
+}
+.new-image-width{
+	width: 300px;
+}
+.new-border-radius{
+	border: 1px solid white;
+	border-radius:15px;
+}
+.footer-syl {
+	color: white;
+	position: sticky;
+	bottom: 0;
+	left: 0;
+	background: black;
+	width: 100%;
+	font-size: 20px;
+}
+@mixin responsive($size) {
+	@if $size == xs {
+		@media (max-width: 576px) {
+			@content;
+		}
+	}
+	@else if $size == sm {
+		@media (min-width: 576px) and (max-width: 768px) {
+			@content;
+		}
+	}
+	@else if $size == md {
+		@media (min-width: 768px) and (max-width: 992px) {
+			@content;
+		}
+	}
+	@else if $size == lg {
+		@media (min-width: 992px) and (max-width: 1200px) {
+			@content;
+		}
+	}
+	@else if $size == xl {
+		@media (min-width: 1200px) {
+			@content;
+		}
+	}
+}
+.card {
+	
+	margin-top: 10px;
+	margin-bottom: 10px;
+	max-height: 400px;
+	overflow-y: scroll;
+
+	h4, p {
+		color: #4B0082;
+		padding: 5px;
+	}
+}
+body{
+padding: $page-padding;
+background-image: url(./images/background.jpg) !important;
+}
+.container {
+	margin-top: 30px;
+	margin-left: 0px !important;
+	padding-left: 30px !important;
+	color: $nav-a;
+}
+.btn-success {
+	@extend .new-border-radius;
+}
+#description {
+	left: 50%;
+ 	position: absolute;
+ 	top: 45%;
+ 	transform: translate(-50%, -55%);
+ 	text-align: center;
+}
+#description p{
+	@include section;
+}
+#contact, #about {
+	display: none;
+}
+.abt-img {
+	@extend .new-image-width;
+}
+#about p {
+	@include section;
+}
+nav {
+	background: $nav-back;
+	display: flex !important;
+	img{
+	width:40px; 
+	margin: 5px 5px 0px 5px;
+	}
+	ul {
+		list-style-type: none;
+		margin: 0px;
+		padding: 0px;
+		font-size: 20px;
+		font-weight: bold;
+	}
+	li {
+		display : inline-block;
+
+	}
+	a {
+		color : $nav-a;
+	}
+}
+footer {
+	@extend .footer-syl;
+}
+.carousel-inner {
+	height:400px;
+	background-color:#f57c37;
+	margin-top:10px;
+	padding: 10px;
+	border:3px solid black;
+}
+
+.carousel-item{
+	h2{
+		color: #051c52;
+		padding-left:10px;
+		font-weight:bold;
+		font-size:40px;
+	}
+	
+	p{
+		margin-left:10px;
+		font-size:25px;
+	}
+
+	img {
+		float:right;
+		margin-right:10px;
+		width: 350px;
+		height: 250px;
+	}
+}
+@mixin header-fnt {
+	color: #b7b5b7;
+	font-size: 40px;
+	font-weight: bold;
+	margin: 10px;
+}
+header{
+	@include header-fnt;
+	@include responsive(sm){
+		font-size: 30px;
+	}
+	@include responsive(xs){
+		font-size: 25px;
+	}
+}
+header{
+	@include header-fnt;
+}
+.header-section{
+	text-align: center;
+}

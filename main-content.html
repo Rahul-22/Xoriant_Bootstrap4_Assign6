@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Assignment 6</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" type="text/css" href="main-content.css">
+	<link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
+	<script type="text/javascript">
+		function viewContact() {
+			document.getElementById('contact').style.display = "block";
+			document.getElementById('about').style.display = "none";
+			document.getElementById('main-body').style.display = "none";
+			document.getElementById('list-body').style.display = "none";
+		}
+		function viewAbout() {
+			document.getElementById('contact').style.display = "none";
+			document.getElementById('about').style.display = "block";
+			document.getElementById('main-body').style.display = "none";
+			document.getElementById('list-body').style.display = "none";
+		}
+		function selfLoad(){
+			window.location.assign("main-content.html");
+		}
+	</script>
+</head>
+<body>
+	<nav class="navbar-expand-sm sticky">
+		<a class="navbar-brand" href="#">
+			<img src="./images/logo.png" alt="logo" onclick="selfLoad()">
+		</a>
+		<ul class="nav">
+			<li class="nav-item">
+				<a class="nav-link" href="Assignment6.html">Home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#about" onclick="viewAbout()">About</a>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" >Product</a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#">Cars</a>
+					<a class="dropdown-item" href="#">Bikes</a>
+					<a class="dropdown-item" href="#">All Electric</a>
+				</div>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Service</a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#">Monthly Service</a>
+					<a class="dropdown-item" href="#">Repair</a>
+					<a class="dropdown-item" href="#">Additional Parts</a>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link " href="#contact" onclick="viewContact()">Contact</a>
+			</li>
+		</ul>
+	</nav>
+	<section class="header-section">
+		<header>Welcome to BigBoy Toys</header>
+	</section>
+	<div id="main-body">
+		<section class="main-body" >
+			<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<h2>Mahindra XUV700</h2>
+						<img class="d-block" src="./images/car1.jpg" alt="First slide">
+						<p>With its Sci-Fi Technology, Spirited Performance and World-Class Safety, this powerhouse of an SUV is obsessively engineered to dial up adrenaline like never before.</p>
+						<p>
+							<b>Key Features</b> <br>
+							20.32 cm (8") Infotainment <br>
+							17.78 cm (7") Cluster <br>
+						Smart Door handles</p>
+						<p><button type="button" class="btn btn-dark">Click to buy</button></p>
+					</div>
+					<div class="carousel-item">
+						<h2>MG Hector</h2>
+						<img class="d-block" src="./images/car2.jpg" alt="First slide">
+						<p> MG Hector is a 5 seater SUV car available at a price range of Rs. 13.49 Lakh to 19.20 Lakh in India. It is available in 16 variants and 9 colours.</p>
+						<p>It sits between the Super and Smart trims, and gets features such as a single-pane sunroof, an electric parking brake with auto hold, and telescopic adjustment for the steering wheel. 
+							<p><button type="button" class="btn btn-dark">Click to buy</button></p>
+						</div>
+						<div class="carousel-item">
+							<h2>KIA Sonet</h2>
+							<img class="d-block" src="./images/car3.jpg" alt="First slide">
+							<p>Kia Sonet is a 5 seater Compact SUV available in a price range of ₹ 6.79 - 13.36 Lakh. It is available in 25 variants, 1 engine option and 4 transmission options : Manual, Clutchless Manua, etc</p>
+							<p>Kia launched its third model in India in the form of the Sonet in September 2020. Now in 2021, the Korean carmaker has updated its baby SUV with the new brand logo, two new variants, and additional features for the existing trims. </p>
+							<p><button type="button" class="btn btn-dark">Click to buy</button></p>
+						</div>
+					</div>
+					<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			</section>
+		</div>
+		<section class="list-body" id="list-body">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 col-md-4 col-lg-4">
+						<div class="card">
+							<img class="card-img-top" src="./images/car1.jpg" alt="car image">
+							<div class="card-block">
+								<h4 class="card-title">Mahindra XUV700</h4>
+								<p class="card-text">With its Sci-Fi Technology, Spirited Performance and World-Class Safety, this powerhouse of an SUV is obsessively engineered to dial up adrenaline like never before.</p>
+								<a href="#" class="btn btn-purple">More about car <i class="fa fa fa-angle-double-right"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-4">
+						<div class="card">
+							<img class="card-img-top" src="./images/car2.jpg" alt="car image">
+							<div class="card-block">
+								<h4 class="card-title">MG Hector</h4>
+								<p class="card-text">MG Hector is a 5 seater SUV car available at a price range of Rs. 13.49 Lakh to 19.20 Lakh in India. It is available in 16 variants and 9 colours.</p>
+								<a href="#" class="btn btn-purple">More about car <i class="fa fa fa-angle-double-right"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-4">
+						<div class="card">
+							<img class="card-img-top" src="./images/car3.jpg" alt="car image">
+							<div class="card-block">
+								<h4 class="card-title">KIA Sonet</h4>
+								<p class="card-text">Kia Sonet is a 5 seater Compact SUV available in a price range of ₹ 6.79 - 13.36 Lakh. It is available in 25 variants, 1 engine option and 4 transmission options : Manual, Clutchless Manua, etc</p>
+								<a href="#" class="btn btn-purple">More about car <i class="fa fa fa-angle-double-right"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-4">
+						<div class="card">
+							<img class="card-img-top" src="./images/car4.jpg" alt="car image">
+							<div class="card-block">
+								<h4 class="card-title">Tata Harrier</h4>
+								<p class="card-text">Tata Harrier is a 5 seater SUV available in a price range of ₹ 14.30 - 20.83 Lakh. It is available in 25 variants, 1 engine option and 2 transmission</p>
+								<a href="#" class="btn btn-purple">More about car <i class="fa fa fa-angle-double-right"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4 col-lg-4">
+						<div class="card">
+							<img class="card-img-top" src="./images/car5.jpg" alt="car image">
+							<div class="card-block">
+								<h4 class="card-title">NEXA Baleno</h4>
+								<p class="card-text">The NEXA Baleno gets all the more bolder and efficient with the Progressive Next-generation Smart Hybrid Technology and it was the first car in its segment to come equipped with this technology. With an integrated starter generator with a Lithium-ion and a Lead Acid Battery, this bold car is indeed a pleasure to drive in the city streets.</p>
+								<a href="#" class="btn btn-purple">More about car <i class="fa fa fa-angle-double-right"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="container">
+			<div id="contact" class="text-center">
+				<h1 >Contact Us</h1>
+				<fieldset>
+					<form>
+						<p>
+							<label for="name">Full Name: </label>
+							<input type="text" name="name" required style="margin-left:30px;">
+						</p>
+						<p>
+							<label for="email">Email address: </label>
+							<input type="email" name="email" style="margin-left:10px;">
+						</p>
+						<p>
+							<label for="phone">Phone Number: </label>
+							<input type="tel" name="phone" style="margin-left:4px;">
+						</p>
+						<p>
+							<label for="name">Message: </label>
+							<input type="message-box" name="message" required style="margin-left:45px; height:60px;">
+						</p>
+						<p>
+							<input class="btn-success" type="submit" id="btn" name="submit" value="Submit Form" style="margin-top:10px">
+							<input class="btn-success" type="submit" id="clear" name="clear" value="Clear" style="margin-top:10px; margin-left:15px; width:120px;">
+						</p>
+					</form>
+				</fieldset>
+			</div>	
+		</div>
+		<div id="container">
+			<div id="about" style="overflow-x: hidden; color: white;">
+				<h1 class="text-center">About</h1>
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-12">
+						<center><img src="./images/xoriant.jpg" class="abt-img img-fluid"></center>
+
+					</div>
+					<div class="col-lg-7 col-md-8 col-sm-12 desc" style="border-left:4px solid
+					#2c094e;">
+					<h3>Who we are</h3>
+					<p>Xoriant is recognized among India's Best Workplaces in IT & IT-BPM 2019. Every year, Great Place to Work® identifies India's Best Workplaces in the IT & IT-BPM sector through an objective and rigorous workplace culture assessment process. Xoriant is a product development, engineering and consulting services company, serving technology startups as well as mid-size to large corporations.
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-8 col-md-8 col-sm-12 desc" style="border-right:4px solid
+				#2c094e;padding-left: 30px;">
+				<h3>Our Mission</h3>
+				<p >Ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+					veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-12">
+				<center><img src="./images/mission-logo.png" class="img-fluid"></center>
+			</div>
+		</div>
+
+	</div>
+</div>
+<section class="footer-section">
+	<footer>Contact us: 022-1221-2586</footer>
+</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="../Bootstrap/js/tether.js"></script>
+<script src="../Bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Assignment 6</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./style6.css">
+	<script type="text/javascript">
+		function loadSignIn(){
+			document.getElementById('signUp-form').style.display = "none";
+			document.getElementById('login-form').style.display = "block";
+		}
+	</script>
+	<script>
+
+	</script>
+</head>
+<body>
+	<section class="header-section">
+		<header>Welcome to BigBoy Toys</header>
+	</section>
+	<section class="login-form" id="login-form" style="display: none;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-box">
+						<h3><b>Sign In</b></h3>
+						<form method="post" action="main-content.html">
+							<div class="form-group has-success">
+								<label class="form-control-label">Enter Name:</label>
+								<input type="text" class="form-control form-control-success" placeholder="Enter your Name">
+							</div>
+							<div class="form-group has-success">
+								<label class="form-control-label">Email address:</label>
+								<input type="email" class="form-control form-control-success" placeholder="Enter Email address">
+							</div>
+							<div class="form-group center-button">
+								<input type="submit" value="Log In" class="btn btn-success">
+								<input type="button" class="btn btn-primary" value="Feedback" data-toggle="modal" data-target="#test-modal">
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="col-md-5">
+					<img src="../Section4/images/cars.jpg">
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="signUp-form" id="signUp-form">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-box">
+						<h3><b>Create an Account</b></h3>
+						<p>Register on our <span data-toogle="tooltip" title="hello There!! have a nice day">Website</span> to view great Cars!!</p>
+						<form method="POST" action="#">
+							<div class="form-group">
+								<label class="form-control-label">Your Name</label>
+								<input type="text" class="form-control" placeholder="Enter your Name" data-fv-notempty="true"> 
+							</div>
+							<div class="form-group">
+								<label class="form-control-label specific-tip" title="I you agree to it you will be responsible yourself">Your Email</label>
+								<input type="email" class="form-control" placeholder="Enter your Email" data-fv-notempty="true"> 
+							</div>
+							<div class="form-group">
+								<label class="form-control-label" data-toogle="tooltip" data-placement="top" title="Enter the Password which you can remember easily.Password must be of atleast 8letters with atleast one special character and a number">Password</label>
+								<input type="password" class="form-control" data-fv-notempty="true"> 
+							</div>
+							<div class="form-check">
+								<label class="form-check-lable">
+									<input type="checkbox" class="form-check-input"> If <span class="specific-tip" title="I you agree to it you will be responsible yourself">Agree</span> to your conditions
+								</label>
+							</div>
+							<div class="form-group center-button">
+								<input type="submit" value="Sign Up" class="btn btn-success">
+								<button type="reset" class="btn btn-danger btn-lg">
+									<span class="glyphicon glyphicon-trash"></span> Clear
+								</button>
+							</div>
+							
+							<p>
+								Already have Account <a href="#" onclick="loadSignIn()">Sign In</a>
+								<button type="button" id="follow-btn" class="btn btn-primary" data-toggle="popover" title="Follow us!!" data-content="Link Provided Leads to your website. Do follow!!" data-trigger="focus" style="float: right; border-radius: 50%; margin-right: 20px;">
+									<span class="glyphicon glyphicon-link"></span>
+								</button>
+								
+							</p>
+						</form>
+					</div>
+				</div>
+				<div class="col-md-5">
+					<img src="../Section4/images/cars.jpg">
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="feedback">
+		<div class="modal fade" id="test-modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Feedback</h5>
+					</div>
+					<div class="modal-body">
+						<div class="form-box">
+							<form>
+								<div class="form-group">
+									<label class="form-control-label">Your Email</label>
+									<input type="email" class="form-control" placeholder="Enter your Email" data-fv-notempty="true"> 
+								</div>
+								<div class="form-group">
+									<label class="form-control-label">Message</label>
+									<input type="textarea" class="form-control" placeholder="Enter your Email" data-fv-notempty="true"> 
+								</div>
+								<div class="form-group center-button">
+									<input type="submit" value="Submit" class="btn btn-success">
+									<button class="btn btn-danger" data-dismiss="modal">Cancel</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script>
+		$(document).ready(function() {
+			$('[data-toogle="tooltip"]').tooltip();
+
+			$('.specific-tip').tooltip({
+				html:true,
+				placement: 'top',
+				trigger: 'click'
+			});
+		});
+		$(document).ready(function(){
+
+			$("#follow-btn").click(function(){
+				$(this).css('backgroundColor','green');
+			});
+
+		});
+		$(document).ready(function(){
+			$('[data-toggle="popover"]').popover();  
+		});
+	</script>
+</body>
+</html>

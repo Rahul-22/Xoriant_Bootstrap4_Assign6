@@ -1,0 +1,71 @@
+$grey-clr: #b7b5b7;
+.new-border-radius{
+	border: 1px solid transparent;
+	border-radius:15px;
+}
+@mixin header-fnt {
+	font-size: 40px;
+	font-weight: bold;
+	margin: 10px;
+}
+@mixin responsive($size) {
+	@if $size == xs {
+		@media (max-width: 576px) {
+			@content;
+		}
+	}
+	@else if $size == sm {
+		@media (min-width: 576px) and (max-width: 768px) {
+			@content;
+		}
+	}
+}
+body {
+	color: #0d2869;
+	background-image: url("../Section3/images/background.jpg");
+}
+header{
+	@include header-fnt;
+	@include responsive(sm){
+		font-size: 30px;
+	}
+	@include responsive(xs){
+		font-size: 25px;
+	}
+}
+.header-section{
+	color: $grey-clr;
+	text-align: center;
+}
+.signUp-form, .login-form  {
+	font-size: 18px;
+	font-weight: bold;
+	h3{
+		font-size: 30px;
+		text-align: center;
+	}
+	p{
+		text-align: center;
+	}
+	form {
+		.center-button{
+			display: flex;
+			justify-content: center;
+		}
+		a {
+			text-decoration: none;
+		}
+	}
+	img {
+		margin: 30px 10px 10px 30px;
+		@extend .new-border-radius;
+
+	}
+	.btn{
+		font-size: 15px;
+		margin-left: 15px;
+	}
+	button {
+		margin-left: 15px;
+	}
+}

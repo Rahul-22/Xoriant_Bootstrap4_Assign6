@@ -1,0 +1,144 @@
+.new-image-width, .abt-img {
+  width: 300px;
+}
+
+.new-border-radius, .btn-success {
+  border: 1px solid white;
+  border-radius: 15px;
+}
+
+.footer-syl, footer {
+  color: white;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  background: black;
+  width: 100%;
+  font-size: 20px;
+}
+
+.card {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-height: 400px;
+  overflow-y: scroll;
+}
+.card h4, .card p {
+  color: #4B0082;
+  padding: 5px;
+}
+
+body {
+  padding: 10px 0;
+  background-image: url(./images/background.jpg) !important;
+}
+
+.container {
+  margin-top: 30px;
+  margin-left: 0px !important;
+  padding-left: 30px !important;
+  color: white;
+}
+
+#description {
+  left: 50%;
+  position: absolute;
+  top: 45%;
+  transform: translate(-50%, -55%);
+  text-align: center;
+}
+
+#description p {
+  color: #6ab446;
+  font-weight: bold;
+  font-size: 20px;
+  text-shadow: 2px 2px #000;
+}
+
+#contact, #about {
+  display: none;
+}
+
+#about p {
+  color: #6ab446;
+  font-weight: bold;
+  font-size: 20px;
+  text-shadow: 2px 2px #000;
+}
+
+nav {
+  background: #0069ff;
+  display: flex !important;
+}
+nav img {
+  width: 40px;
+  margin: 5px 5px 0px 5px;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  font-size: 20px;
+  font-weight: bold;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  color: white;
+}
+
+.carousel-inner {
+  height: 400px;
+  background-color: #f57c37;
+  margin-top: 10px;
+  padding: 10px;
+  border: 3px solid black;
+}
+
+.carousel-item h2 {
+  color: #051c52;
+  padding-left: 10px;
+  font-weight: bold;
+  font-size: 40px;
+}
+.carousel-item p {
+  margin-left: 10px;
+  font-size: 25px;
+}
+.carousel-item img {
+  float: right;
+  margin-right: 10px;
+  width: 350px;
+  height: 250px;
+}
+
+header {
+  color: #b7b5b7;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 10px;
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  header {
+    font-size: 30px;
+  }
+}
+@media (max-width: 576px) {
+  header {
+    font-size: 25px;
+  }
+}
+
+header {
+  color: #b7b5b7;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.header-section {
+  text-align: center;
+}
+
+/*# sourceMappingURL=main-content.css.map */

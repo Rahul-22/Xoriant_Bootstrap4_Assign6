@@ -1,0 +1,61 @@
+.new-border-radius, .signUp-form img, .login-form img {
+  border: 1px solid transparent;
+  border-radius: 15px;
+}
+
+body {
+  color: #0d2869;
+  background-image: url("../Section3/images/background.jpg");
+}
+
+header {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 10px;
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  header {
+    font-size: 30px;
+  }
+}
+@media (max-width: 576px) {
+  header {
+    font-size: 25px;
+  }
+}
+
+.header-section {
+  color: #b7b5b7;
+  text-align: center;
+}
+
+.signUp-form, .login-form {
+  font-size: 18px;
+  font-weight: bold;
+}
+.signUp-form h3, .login-form h3 {
+  font-size: 30px;
+  text-align: center;
+}
+.signUp-form p, .login-form p {
+  text-align: center;
+}
+.signUp-form form .center-button, .login-form form .center-button {
+  display: flex;
+  justify-content: center;
+}
+.signUp-form form a, .login-form form a {
+  text-decoration: none;
+}
+.signUp-form img, .login-form img {
+  margin: 30px 10px 10px 30px;
+}
+.signUp-form .btn, .login-form .btn {
+  font-size: 15px;
+  margin-left: 15px;
+}
+.signUp-form button, .login-form button {
+  margin-left: 15px;
+}
+
+/*# sourceMappingURL=style6.css.map */
