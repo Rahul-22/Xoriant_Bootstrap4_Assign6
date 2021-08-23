@@ -14,6 +14,9 @@
 			document.getElementById('signUp-form').style.display = "none";
 			document.getElementById('login-form').style.display = "block";
 		}
+		function loadPage(){
+			window.location.assign("https://github.com/Rahul-22/Xoriant_Bootstrap4_Assign6/blob/master/main-content.html");
+		}
 	</script>
 	<script>
 
@@ -29,7 +32,7 @@
 				<div class="col-md-6">
 					<div class="form-box">
 						<h3><b>Sign In</b></h3>
-						<form method="post" action="main-content.html">
+						<form method="post">
 							<div class="form-group has-success">
 								<label class="form-control-label">Enter Name:</label>
 								<input type="text" class="form-control form-control-success" placeholder="Enter your Name">
@@ -39,7 +42,7 @@
 								<input type="email" class="form-control form-control-success" placeholder="Enter Email address">
 							</div>
 							<div class="form-group center-button">
-								<input type="submit" value="Log In" class="btn btn-success">
+								<input type="submit" value="Log In" class="btn btn-success" onclick="loadPage()">
 								<input type="button" class="btn btn-primary" value="Feedback" data-toggle="modal" data-target="#test-modal">
 							</div>
 						</form>
