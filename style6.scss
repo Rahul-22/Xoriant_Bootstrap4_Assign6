@@ -22,7 +22,7 @@ $grey-clr: #b7b5b7;
 }
 body {
 	color: #0d2869;
-	background-image: url("../Section3/images/background.jpg");
+	background-image: url("./images/background.jpg");
 }
 header{
 	@include header-fnt;
